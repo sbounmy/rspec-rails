@@ -554,6 +554,18 @@ However, you must first clear the task that rspec-rails defined:
 task("spec").clear
 ```
 
+## ActionMailer Preview
+
+In Rails 4.1, ActionMailer made easy to display email sent by your app by implementing [previews](http://guides.rubyonrails.org/4_1_release_notes.html#action-mailer-previews).
+
+Preview are generated along with mailer:
+```cli
+bundle exec rails g mailer order_mailer
+  create    app/mailers/order_mailer.rb
+  create    spec/mailers/order_mailer_spec.rb
+  create    spec/mailers/previews/order_mailer_preview.rb
+```
+You can then preview all your emails at http://localhost:3000/rails/mailers
 
 ## Also see
 
